@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Le Ballon Rouge</title>
+<meta name="description" content="A thirty-second animated short: a red balloon drifts over Paris on the wind and catches on a lamp post just as a boy walks up.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Jost:wght@400;500;600&display=swap">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 40%22%3E%3Cellipse cx=%2216%22 cy=%2216%22 rx=%2213%22 ry=%2215%22 fill=%22%23d8232c%22/%3E%3C/svg%3E">
+</head>
+<body>
+<canvas id="film" role="img" aria-label="Animated short film: a red balloon drifts over the rooftops of Paris and down a street, then catches on a lamp post as a boy walks up and looks at it."></canvas>
+<div id="stage">
+  <div class="cap" id="capOpen">Paris, un matin d’automne</div>
+  <div class="cap" id="capEnd"><div class="t">Le Ballon Rouge</div><div class="s">Rue de Ménilmontant · Paris</div></div>
+</div>
+
+<section class="panel" id="intro">
+  <p class="eyebrow">A short film · 30 seconds · with sound</p>
+  <h1>Le Ballon Rouge</h1>
+  <p class="lede">A red balloon rides the morning wind over the rooftops of Paris, looking for someone.</p>
+  <button class="play" id="play" disabled><span class="dot" aria-hidden="true"></span><span id="playLabel">Preparing the scene…</span></button>
+  <p class="hint">Space pauses · M mutes · R restarts</p>
+</section>
+
+<section class="panel fade" id="end" hidden>
+  <p class="eyebrow">Fin</p>
+  <h2>Le Ballon Rouge</h2>
+  <button class="play" id="again"><span class="dot" aria-hidden="true"></span>Watch again</button>
+</section>
+
+<div id="controls" hidden>
+  <button class="ctl" id="bPause" aria-label="Pause">
+    <svg viewBox="0 0 16 16" fill="currentColor" id="icoPause"><rect x="3" y="2" width="3.4" height="12" rx="1"/><rect x="9.6" y="2" width="3.4" height="12" rx="1"/></svg>
+    <svg viewBox="0 0 16 16" fill="currentColor" id="icoPlay" hidden><path d="M4 2.2v11.6c0 .6.7 1 1.2.7l9-5.8c.5-.3.5-1.1 0-1.4l-9-5.8C4.7 1.2 4 1.6 4 2.2z"/></svg>
+  </button>
+  <button class="ctl" id="bMute" aria-label="Mute">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" id="icoSound"><path d="M2.5 6h2.6L8.6 3v10L5.1 10H2.5z" fill="currentColor" stroke="none"/><path d="M11 5.5a3.5 3.5 0 0 1 0 5M12.9 3.6a6.2 6.2 0 0 1 0 8.8"/></svg>
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" id="icoMuted" hidden><path d="M2.5 6h2.6L8.6 3v10L5.1 10H2.5z" fill="currentColor" stroke="none"/><path d="M11 6l4 4M15 6l-4 4"/></svg>
+  </button>
+  <button class="ctl" id="bRestart" aria-label="Restart">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8a5 5 0 1 0 1.6-3.7"/><path d="M3 2.5v3h3"/></svg>
+  </button>
+</div>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
