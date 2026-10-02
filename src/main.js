@@ -3,6 +3,10 @@ import './style.css';
 (() => {
 'use strict';
 
+// The film's titles are French; keep browsers from offering to translate the page.
+const root = document.documentElement;
+root.lang = 'en'; root.setAttribute('translate', 'no'); root.classList.add('notranslate');
+
 /* =====================================================================
    Utilities
    ===================================================================== */
